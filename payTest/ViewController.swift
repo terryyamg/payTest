@@ -39,8 +39,7 @@ class ViewController: UIViewController {
             let clientToken = String(data: data!, encoding: String.Encoding.utf8)
             print("clientToken:\(clientToken!)")
             self.showDropIn(clientTokenOrTokenizationKey: clientToken!)
-            self.btnShow.isEnabled = true
-            self.indicator.isHidden = true
+            
             // As an example, you may wish to present Drop-in at this point.
             // Continue to the next section to learn more...
             }.resume()
@@ -52,6 +51,7 @@ class ViewController: UIViewController {
     
     
     func showDropIn(clientTokenOrTokenizationKey: String) {
+        DispatchQueue.main.async {
         let request =  BTDropInRequest()
         let dropIn = BTDropInController(authorization: clientTokenOrTokenizationKey, request: request) { (controller, result, error) in
             if (error != nil) {
@@ -61,13 +61,17 @@ class ViewController: UIViewController {
             } else if let result = result {
                 // Use the BTDropInResult properties to update your UI
                 print("result paymentOptionType:\(result.paymentOptionType)")
-                print("result paymentMethod:\(result.paymentMethod.debugDescription)")
+                print("result paymentMethod.nonce:\(result.paymentMethod!.nonce)")
                 print("result paymentIcon:\(result.paymentIcon)")
                 print("result paymentDescription:\(result.paymentDescription)")
             }
+            
+                self.btnShow.isEnabled = true
+                self.indicator.isHidden = true
             controller.dismiss(animated: true, completion: nil)
         }
         self.present(dropIn!, animated: true, completion: nil)
+        }
     }
 }
 
