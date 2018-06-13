@@ -14,6 +14,7 @@
 		2B5FE8EF20D0CA2F006603CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B5FE8ED20D0CA2F006603CB /* LaunchScreen.storyboard */; };
 		2B5FE8FA20D0CA2F006603CB /* payTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5FE8F920D0CA2F006603CB /* payTestTests.swift */; };
 		2B5FE90520D0CA2F006603CB /* payTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5FE90420D0CA2F006603CB /* payTestUITests.swift */; };
+		73AC8573ED89F5859B2C4790 /* Pods_payTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDF5EF713348D676188F6E53 /* Pods_payTest.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,9 @@
 		2B5FE90020D0CA2F006603CB /* payTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = payTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B5FE90420D0CA2F006603CB /* payTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = payTestUITests.swift; sourceTree = "<group>"; };
 		2B5FE90620D0CA2F006603CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3E475037D6E17F82504C45D3 /* Pods-payTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-payTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-payTest/Pods-payTest.debug.xcconfig"; sourceTree = "<group>"; };
+		DDF5EF713348D676188F6E53 /* Pods_payTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_payTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E13169B2C6BBA132A69D5B44 /* Pods-payTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-payTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-payTest/Pods-payTest.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73AC8573ED89F5859B2C4790 /* Pods_payTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +86,8 @@
 				2B5FE8F820D0CA2F006603CB /* payTestTests */,
 				2B5FE90320D0CA2F006603CB /* payTestUITests */,
 				2B5FE8E220D0CA2C006603CB /* Products */,
+				E1334E15F9D5EA39B4A0D05A /* Pods */,
+				BFD57BE0326B538689A2A780 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +132,23 @@
 			path = payTestUITests;
 			sourceTree = "<group>";
 		};
+		BFD57BE0326B538689A2A780 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DDF5EF713348D676188F6E53 /* Pods_payTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E1334E15F9D5EA39B4A0D05A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3E475037D6E17F82504C45D3 /* Pods-payTest.debug.xcconfig */,
+				E13169B2C6BBA132A69D5B44 /* Pods-payTest.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +156,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2B5FE90920D0CA2F006603CB /* Build configuration list for PBXNativeTarget "payTest" */;
 			buildPhases = (
+				F8B131F7648ADD645A4B1469 /* [CP] Check Pods Manifest.lock */,
 				2B5FE8DD20D0CA2C006603CB /* Sources */,
 				2B5FE8DE20D0CA2C006603CB /* Frameworks */,
 				2B5FE8DF20D0CA2C006603CB /* Resources */,
+				BCC2B17785803CEC58C13ADB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -250,6 +276,47 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BCC2B17785803CEC58C13ADB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-payTest/Pods-payTest-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Braintree/Braintree.framework",
+				"${BUILT_PRODUCTS_DIR}/BraintreeDropIn/BraintreeDropIn.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Braintree.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BraintreeDropIn.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-payTest/Pods-payTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F8B131F7648ADD645A4B1469 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-payTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2B5FE8DD20D0CA2C006603CB /* Sources */ = {
@@ -428,6 +495,7 @@
 		};
 		2B5FE90A20D0CA2F006603CB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E475037D6E17F82504C45D3 /* Pods-payTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -446,6 +514,7 @@
 		};
 		2B5FE90B20D0CA2F006603CB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E13169B2C6BBA132A69D5B44 /* Pods-payTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

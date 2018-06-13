@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,169 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="payTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="測試資料" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jQa-15-zBu">
+                                <rect key="frame" x="152.5" y="20.5" width="70" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="有效的卡號" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DlB-Lx-gXf">
+                                <rect key="frame" x="16" y="30" width="87" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="T8F-lP-ulH">
+                                <rect key="frame" x="0.0" y="51" width="375" height="150"/>
+                                <color key="backgroundColor" red="0.74996737847358874" green="0.9480635203179566" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="Osn-dz-WD0"/>
+                                </constraints>
+                                <string key="text">378282246310005 	   American Express
+371449635398431 	   American Express
+36259600000004 	   Diners Club
+6011111111111117 	          Discover
+3530111333300000 	   JCB
+6304000000000000   Maestro
+5555555555554444    Mastercard
+2223000048400011 	    Mastercard
+4111111111111111 	           Visa
+4005519200000004     Visa
+4009348888881881     Visa
+4012000033330026     Visa
+4012000077777777      Visa
+4012888888881881      Visa
+4217651111111119           Visa
+4500600000000061     Visa</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="未成功驗證的卡號" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ONW-of-jIH">
+                                <rect key="frame" x="16" y="208.5" width="139" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="kjt-VP-PwU">
+                                <rect key="frame" x="0.0" y="229.5" width="375" height="130"/>
+                                <color key="backgroundColor" red="0.74996737849999995" green="0.94806352029999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="ZxT-4e-LIB"/>
+                                </constraints>
+                                <string key="text">4000111111111115 	Visa 	processor declined
+5105105105105100 	Mastercard 	processor declined
+378734493671000 	American Express 	processor declined
+6011000990139424 	Discover 	processor declined
+38520000009814 	Diners Club 	processor declined
+3566002020360505 	JCB 	failed (3000)</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="帶有類型指示器的卡號" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="77H-m3-ash">
+                                <rect key="frame" x="16" y="367.5" width="174" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="3ga-0H-0fC">
+                                <rect key="frame" x="0.0" y="388.5" width="375" height="130"/>
+                                <color key="backgroundColor" red="0.74996737849999995" green="0.94806352029999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="0MG-dK-3qo"/>
+                                </constraints>
+                                <string key="text">4500600000000061 	prepaid = "Yes"
+4009040000000009 	commercial = "Yes"
+4005519200000004 	Durbin regulated = "Yes"
+4012000033330026 	healthcare = "Yes"
+4012000033330125 	debit = "Yes"
+4012000033330224 	payroll = "Yes"
+4012000033330422 	all values = "No"
+4012000033330323 	all values = "Unknown"</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="帶有其他信息的卡號" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c95-V1-jpl">
+                                <rect key="frame" x="16" y="526" width="156" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="XjV-dX-yl7">
+                                <rect key="frame" x="0.0" y="547" width="375" height="60"/>
+                                <color key="backgroundColor" red="0.74996737849999995" green="0.94806352029999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="aWR-2G-tWj"/>
+                                </constraints>
+                                <string key="text">4012000033330620 	country of issuance = "USA"
+4012000033330729 	country of issuance = "CAN"
+4012000033330521 	issuing bank ="NETWORK ONLY"</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qpG-uf-zdq">
+                                <rect key="frame" x="163" y="615" width="50" height="30"/>
+                                <color key="backgroundColor" red="0.1730491817" green="0.35881844159999998" blue="0.91377598049999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="TEH-mi-1W6"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Show"/>
+                                <connections>
+                                    <action selector="jumpDropIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="80Z-Hu-qDo"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="hOu-fc-A7P">
+                                <rect key="frame" x="162.5" y="615" width="50" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="KMh-me-jNc"/>
+                                    <constraint firstAttribute="height" constant="30" id="gZQ-Lu-YSH"/>
+                                </constraints>
+                            </activityIndicatorView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="c95-V1-jpl" firstAttribute="top" secondItem="3ga-0H-0fC" secondAttribute="bottom" constant="8" id="0p3-Yh-xHR"/>
+                            <constraint firstItem="kjt-VP-PwU" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="23e-4Q-e3E"/>
+                            <constraint firstItem="XjV-dX-yl7" firstAttribute="top" secondItem="c95-V1-jpl" secondAttribute="bottom" id="7BY-Mq-am5"/>
+                            <constraint firstItem="DlB-Lx-gXf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="AZA-6l-CCg"/>
+                            <constraint firstItem="c95-V1-jpl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="DK1-df-JRA"/>
+                            <constraint firstItem="kjt-VP-PwU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Fa4-7Z-iZL"/>
+                            <constraint firstItem="DlB-Lx-gXf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="HKk-Ri-oer"/>
+                            <constraint firstItem="kjt-VP-PwU" firstAttribute="top" secondItem="ONW-of-jIH" secondAttribute="bottom" id="IQu-z0-rZ4"/>
+                            <constraint firstItem="3ga-0H-0fC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="K2C-Kf-wtj"/>
+                            <constraint firstItem="ONW-of-jIH" firstAttribute="top" secondItem="T8F-lP-ulH" secondAttribute="bottom" constant="8" id="K2O-JX-cZO"/>
+                            <constraint firstItem="77H-m3-ash" firstAttribute="top" secondItem="kjt-VP-PwU" secondAttribute="bottom" constant="8" id="MLO-xN-mkP"/>
+                            <constraint firstItem="qpG-uf-zdq" firstAttribute="top" secondItem="XjV-dX-yl7" secondAttribute="bottom" constant="8" id="Sai-mG-xxi"/>
+                            <constraint firstItem="jQa-15-zBu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Wlo-OZ-u0g"/>
+                            <constraint firstItem="XjV-dX-yl7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="YK3-oa-ICa"/>
+                            <constraint firstItem="77H-m3-ash" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="aeH-QU-FrX"/>
+                            <constraint firstItem="hOu-fc-A7P" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eDK-Fz-k9z"/>
+                            <constraint firstItem="qpG-uf-zdq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iBn-QG-h9r"/>
+                            <constraint firstItem="T8F-lP-ulH" firstAttribute="top" secondItem="DlB-Lx-gXf" secondAttribute="bottom" id="jHn-gh-hZ7"/>
+                            <constraint firstItem="hOu-fc-A7P" firstAttribute="top" secondItem="XjV-dX-yl7" secondAttribute="bottom" constant="8" id="nvk-Rb-vX3"/>
+                            <constraint firstItem="3ga-0H-0fC" firstAttribute="top" secondItem="77H-m3-ash" secondAttribute="bottom" id="pLD-XW-YK2"/>
+                            <constraint firstItem="T8F-lP-ulH" firstAttribute="top" secondItem="jQa-15-zBu" secondAttribute="bottom" constant="10" id="qLx-c1-oID"/>
+                            <constraint firstItem="ONW-of-jIH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="w27-xI-PPv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XjV-dX-yl7" secondAttribute="trailing" id="wY5-Co-ZP6"/>
+                            <constraint firstItem="T8F-lP-ulH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xFn-7d-A5m"/>
+                            <constraint firstItem="3ga-0H-0fC" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="y4i-z8-Ys5"/>
+                            <constraint firstItem="T8F-lP-ulH" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="z7X-a0-W8g"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="btnShow" destination="qpG-uf-zdq" id="HAh-fv-PkC"/>
+                        <outlet property="indicator" destination="hOu-fc-A7P" id="3fe-1M-y87"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="32.833583208395808"/>
         </scene>
     </scenes>
 </document>
